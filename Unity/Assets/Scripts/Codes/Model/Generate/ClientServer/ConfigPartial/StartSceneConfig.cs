@@ -20,6 +20,14 @@ namespace ET
         
         public List<StartSceneConfig> Robots = new List<StartSceneConfig>();
 
+        public List<StartSceneConfig> Games = new List<StartSceneConfig>();
+
+        public List<StartSceneConfig> Logins = new List<StartSceneConfig>();
+
+        public List<StartSceneConfig> Accounts = new List<StartSceneConfig>();
+
+        public List<StartSceneConfig> GMs = new List<StartSceneConfig>();
+
         public StartSceneConfig BenchmarkServer;
         
         public List<StartSceneConfig> GetByProcess(int process)
@@ -63,6 +71,18 @@ namespace ET
                         break;
                     case SceneType.BenchmarkServer:
                         this.BenchmarkServer = startSceneConfig;
+                        break;
+                    case SceneType.Game:
+                        this.Games.Add(startSceneConfig);
+                        break;
+                    case SceneType.Login:
+                        this.Logins.Add(startSceneConfig);
+                        break;
+                    case SceneType.Account:
+                        this.Accounts.Add(startSceneConfig); 
+                        break;
+                    case SceneType.GM:
+                        this.GMs.Add(startSceneConfig);
                         break;
                 }
             }

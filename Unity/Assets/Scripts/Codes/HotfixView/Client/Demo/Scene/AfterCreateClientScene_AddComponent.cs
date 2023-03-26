@@ -10,7 +10,7 @@ namespace ET.Client
             scene.AddComponent<UIComponent>();
             scene.AddComponent<ResourcesLoaderComponent>();
             
-            scene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_Login);
+            scene.GetComponent<UIComponent>().ShowWindow(WindowID.WindowID_GameRoom);
             await ETTask.CompletedTask;
         }
     }
