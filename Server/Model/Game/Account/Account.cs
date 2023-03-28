@@ -10,8 +10,6 @@
         Disab = 4, //删除用户
     }
 
-    [ComponentOf(typeof(Scene))]
-    [ChildType(typeof(Session))]
     public class Account : Entity,IAwake
     {
 
