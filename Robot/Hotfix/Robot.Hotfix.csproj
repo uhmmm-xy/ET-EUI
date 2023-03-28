@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -26,10 +26,10 @@
     </ItemGroup>
     
     <ItemGroup>
-        <Compile Include="..\..\Server\Hotfix\Demo\Session\InnerMessageDispatcherHelper.cs">
+        <Compile Include="..\..\Server\Hotfix\Game\Session\InnerMessageDispatcherHelper.cs">
           <Link>Server\Session\InnerMessageDispatcherHelper.cs</Link>
         </Compile>
-        <Compile Include="..\..\Server\Hotfix\Demo\Session\SessionStreamDispatcherServerInner.cs">
+        <Compile Include="..\..\Server\Hotfix\Game\Session\SessionStreamDispatcherServerInner.cs">
           <Link>Server\Session\SessionStreamDispatcherServerInner.cs</Link>
         </Compile>
         <Compile Include="..\..\Unity\Codes\Hotfix\Module\AI\**\*.cs">
@@ -64,8 +64,8 @@
             <Link>Module\NetworkTCP\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
 
-        <Compile Include="..\..\Unity\Codes\Hotfix\Demo\**\*.cs"> 
-            <Link>Demo\%(RecursiveDir)%(FileName)%(Extension)</Link>
+        <Compile Include="..\..\Unity\Codes\Hotfix\Game\**\*.cs"> 
+            <Link>Game\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
 
         <Compile Include="..\..\Unity\Codes\Hotfix\Core\**\*.cs">

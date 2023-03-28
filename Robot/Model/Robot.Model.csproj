@@ -90,8 +90,8 @@
             <Link>Module\Recast\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
 
-        <Compile Include="..\..\Unity\Codes\Model\Demo\**\*.cs">
-            <Link>Demo\%(RecursiveDir)%(FileName)%(Extension)</Link>
+        <Compile Include="..\..\Unity\Codes\Model\Game\**\*.cs">
+            <Link>Game\%(RecursiveDir)%(FileName)%(Extension)</Link>
         </Compile>
 
         <Compile Include="..\..\Server\Model\Generate\**\*.cs">

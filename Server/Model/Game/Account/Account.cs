@@ -10,8 +10,8 @@
         Disab = 4, //删除用户
     }
 
-    [ComponentOf]
-    [ChildType]
+    [ComponentOf()]
+    [ChildType()]
     public class Account : Entity,IAwake
     {
 
