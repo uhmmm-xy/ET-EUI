@@ -479,6 +479,43 @@ namespace ET
 
 	}
 
+	[ResponseType(nameof(L2C_LoginAccount))]
+	[Message(OuterMessage.C2L_LoginAccount)]
+	[ProtoContract]
+	public partial class C2L_LoginAccount: ProtoObject, IRequest
+	{
+		[ProtoMember(1)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(2)]
+		public string AccountId { get; set; }
+
+	}
+
+	[Message(OuterMessage.L2C_LoginAccount)]
+	[ProtoContract]
+	public partial class L2C_LoginAccount: ProtoObject, IResponse
+	{
+		[ProtoMember(1)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(2)]
+		public int Error { get; set; }
+
+		[ProtoMember(3)]
+		public string Message { get; set; }
+
+		[ProtoMember(4)]
+		public long Key { get; set; }
+
+		[ProtoMember(5)]
+		public long GateId { get; set; }
+
+		[ProtoMember(6)]
+		public string Address { get; set; }
+
+	}
+
 	public static class OuterMessage
 	{
 		 public const ushort HttpGetRouterResponse = 10002;
@@ -515,5 +552,7 @@ namespace ET
 		 public const ushort M2C_TransferMap = 10033;
 		 public const ushort C2G_Benchmark = 10034;
 		 public const ushort G2C_Benchmark = 10035;
+		 public const ushort C2L_LoginAccount = 10036;
+		 public const ushort L2C_LoginAccount = 10037;
 	}
 }

@@ -360,6 +360,40 @@ namespace ET
 
 	}
 
+	[ResponseType(nameof(G2L_GetLoginKey))]
+	[Message(InnerMessage.L2G_GetLoginKey)]
+	[ProtoContract]
+	public partial class L2G_GetLoginKey: ProtoObject, IActorRequest
+	{
+		[ProtoMember(1)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(2)]
+		public string AccountId { get; set; }
+
+	}
+
+	[Message(InnerMessage.G2L_GetLoginKey)]
+	[ProtoContract]
+	public partial class G2L_GetLoginKey: ProtoObject, IActorResponse
+	{
+		[ProtoMember(1)]
+		public int RpcId { get; set; }
+
+		[ProtoMember(2)]
+		public int Error { get; set; }
+
+		[ProtoMember(3)]
+		public string Message { get; set; }
+
+		[ProtoMember(4)]
+		public long Key { get; set; }
+
+		[ProtoMember(5)]
+		public long GateId { get; set; }
+
+	}
+
 	public static class InnerMessage
 	{
 		 public const ushort ObjectQueryRequest = 20002;
@@ -385,5 +419,7 @@ namespace ET
 		 public const ushort ObjectQueryResponse = 20022;
 		 public const ushort M2M_UnitTransferRequest = 20023;
 		 public const ushort M2M_UnitTransferResponse = 20024;
+		 public const ushort L2G_GetLoginKey = 20025;
+		 public const ushort G2L_GetLoginKey = 20026;
 	}
 }

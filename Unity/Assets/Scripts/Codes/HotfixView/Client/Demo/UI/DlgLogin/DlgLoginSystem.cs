@@ -23,7 +23,7 @@ namespace ET.Client
 
 		public static void OnLoginClickHandler(this DlgLogin self)
 		{
-			//LoginHelper.Login(self.ClientScene(), self.View.E_AccountInputField.text, self.View.E_PasswordInputField.text).Coroutine();
+			LoginHelper.Login(self.ClientScene(), self.View.E_AccountInputField.text).Coroutine();
 		}
 		
 	}

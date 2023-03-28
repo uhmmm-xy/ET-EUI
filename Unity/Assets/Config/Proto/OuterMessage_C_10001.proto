@@ -235,3 +235,21 @@ message G2C_Benchmark // IResponse
 	int32 Error = 2;
 	string Message = 3;
 }
+
+//ResponseType L2C_LoginAccount
+message C2L_LoginAccount //IRequest
+{
+	int32 RpcId = 1;
+	string AccountId = 2;
+}
+
+message L2C_LoginAccount //IResponse
+{
+	int32 RpcId = 1;
+	int32 Error = 2;
+	string Message = 3;
+
+	int64 Key = 4;
+	int64 GateId = 5;
+	string Address = 6;
+}

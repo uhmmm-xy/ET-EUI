@@ -1,17 +1,19 @@
-﻿namespace ET;
-
-[FriendOf(typeof(Account))]
-public static class AccountSystem
+﻿namespace ET
 {
-    [ObjectSystem]
-    public class AccountAwakeSystem:AwakeSystem<Account,string>
+
+    [FriendOf(typeof (Account))]
+    public static class AccountSystem
     {
-        protected override void Awake(Account self,string AccountId)
+        [ObjectSystem]
+        public class AccountAwakeSystem: AwakeSystem<Account, string>
         {
-            self.AccountID = AccountId;
-            self.CraeteTime = TimeHelper.ServerNow();
-            self.AccountType = (int)AccountType.none;
+            protected override void Awake(Account self, string AccountId)
+            {
+                self.AccountID = AccountId;
+                self.CraeteTime = TimeHelper.ServerNow();
+                self.AccountType = (int)AccountType.none;
+            }
         }
     }
-}
 
+}
