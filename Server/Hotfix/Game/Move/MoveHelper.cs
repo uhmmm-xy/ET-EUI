@@ -38,16 +38,18 @@ namespace ET
             }
             MessageHelper.Broadcast(unit, m2CPathfindingResult);
 
-            bool ret = await unit.GetComponent<MoveComponent>().MoveToAsync(path, speed);
-            if (ret) // 如果返回false，说明被其它移动取消了，这时候不需要通知客户端stop
-            {
-                unit.SendStop(0);
-            }
+            //bool ret = await unit.GetComponent<MoveComponent>().MoveToAsync(path, speed);
+            //if (ret) // 如果返回false，说明被其它移动取消了，这时候不需要通知客户端stop
+            //{
+            //    unit.SendStop(0);
+            //}
+
+            await ETTask.CompletedTask;
         }
 
         public static void Stop(this Unit unit, int error)
         {
-            unit.GetComponent<MoveComponent>().Stop();
+            //unit.GetComponent<MoveComponent>().Stop();
             unit.SendStop(error);
         }
 
