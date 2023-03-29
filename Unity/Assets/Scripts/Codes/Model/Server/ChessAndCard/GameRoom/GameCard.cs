@@ -1,5 +1,6 @@
 ﻿namespace ET
 {
+
     public class PokerType
     {
         public const int Spade = 0;

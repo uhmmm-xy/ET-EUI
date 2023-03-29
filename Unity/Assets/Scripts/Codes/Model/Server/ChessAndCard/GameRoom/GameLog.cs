@@ -16,10 +16,10 @@ namespace ET
     
     public class GameLog: Entity
     {
-        public int GameType;
-        public int CurrType; //操作类型
-        public List<GameCard> CardList = new List<GameCard>(); //操作牌
-        public List<GameCard> Before = new List<GameCard>();//之前牌型
-        public List<GameCard> Later = new List<GameCard>();//操作之后
+        public int GameType; //游戏类型
+        public GamePlayer Player; //操作人
+        public List<GameCard> ResidueCards; //底牌
+        public List<GameCard> OutCards; //弃牌
+        public int GameCurrType; //操作类型
     }
 }
