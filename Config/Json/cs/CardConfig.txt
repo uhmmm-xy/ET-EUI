@@ -1,0 +1,13 @@
+{"list":[
+{"_t":"CardConfig","_id":1,"MixValue":1,"MaxValue":9,"CardType":0,"Count":4},
+{"_t":"CardConfig","_id":2,"MixValue":1,"MaxValue":9,"CardType":1,"Count":4},
+{"_t":"CardConfig","_id":3,"MixValue":1,"MaxValue":9,"CardType":2,"Count":4},
+{"_t":"CardConfig","_id":4,"MixValue":1,"MaxValue":3,"CardType":3,"Count":4},
+{"_t":"CardConfig","_id":5,"MixValue":1,"MaxValue":4,"CardType":4,"Count":4},
+{"_t":"CardConfig","_id":6,"MixValue":1,"MaxValue":8,"CardType":5,"Count":1},
+{"_t":"CardConfig","_id":7,"MixValue":1,"MaxValue":13,"CardType":0,"Count":1},
+{"_t":"CardConfig","_id":8,"MixValue":1,"MaxValue":13,"CardType":1,"Count":1},
+{"_t":"CardConfig","_id":9,"MixValue":1,"MaxValue":13,"CardType":2,"Count":1},
+{"_t":"CardConfig","_id":10,"MixValue":1,"MaxValue":13,"CardType":3,"Count":1},
+{"_t":"CardConfig","_id":11,"MixValue":1,"MaxValue":2,"CardType":4,"Count":1},
+]}

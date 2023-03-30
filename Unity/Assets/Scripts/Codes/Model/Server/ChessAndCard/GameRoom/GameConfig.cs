@@ -2,7 +2,7 @@
 
 namespace ET
 {
-    public class GameConfig : Entity,IAwake<string>
+    public class GameConfigComponent : Entity,IAwake<string>
     {
         public int GameType; //游戏类型
         public string GameName; 
